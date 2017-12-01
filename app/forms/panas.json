@@ -1,0 +1,823 @@
+[
+    {
+        "field_name": "panas1",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How INTERESTED do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_2",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How DISTRESSED do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_3",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How EXCITED do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_4",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How UPSET do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_5",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How STRONG do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_6",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How GUILTY do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_7",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How SCARED do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_8",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How HOSTILE do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_9",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How ENTHUSIASTIC do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_10",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How PROUD do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_11",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How IRRITABLE do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_12",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How ALERT do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_13",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How ASHAMED do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_14",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How INSPIRED do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_15",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How NERVOUS do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_16",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How DETERMINED do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_17",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How ATTENTIVE do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_18",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How JITTERY do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_19",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How ACTIVE do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "panas_20",
+        "form_name": "panas",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "How AFRAID do you feel right now?",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Very Slightly or Not at all"
+            },
+            {
+                "code": "2",
+                "label": "A little"
+            },
+            {
+                "code": "3",
+                "label": "Moderately"
+            },
+            {
+                "code": "4",
+                "label": "Quite a Bit"
+            },
+            {
+                "code": "5",
+                "label": "Extremely"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    }
+]

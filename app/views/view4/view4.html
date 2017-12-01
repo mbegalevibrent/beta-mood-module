@@ -1,0 +1,41 @@
+<div class="onboarding" ng-show="!showQuestions">
+	<div class="top-panel"><img class="onboarding-image-md" src="img/{{currentOnboardingImage}}"></div>
+	<div class="bottom-panel" ng-bind-html="currentOnboardingText"></div>
+	<div class="bottom-nav">
+		<div class="btn-group" role="group" aria-label="...">
+	  		<button ng-click="startQuestions()" type="button" class="btn btn-full btn-primary">Get Started</button>
+		</div>
+	</div>
+</div>
+
+<div ng-show="showQuestions">
+	<div class="question">
+		<div class="header" ng-show="currentQuestion.section_header != ''" >
+		{{currentQuestion.section_header}}
+		</div>
+
+		<div class="question-label">
+			{{currentQuestion.field_label}}
+		</div>
+		<hr/>
+		<div class="question-options">
+			<div ng-repeat="option in currentQuestion.select_choices_or_calculations">
+			<label ng-click="saveValue(option.value)">
+				<table>
+					<tr>
+						<td><input type="radio" name="{{currentQuestion.field_name}}"/>&nbsp;&nbsp;</td>
+			  			<td>{{option.label}}</td>
+		  			</tr>
+	  			</table>
+			 </label>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-nav">
+		<div class="btn-group" role="group" aria-label="...">
+	  		<button ng-show="firstSlideTrue()" ng-click="next()" type="button" class="btn btn-full btn-primary">Get Started</button>
+	  		<button ng-hide="firstSlideTrue()" ng-click="back()" type="button" class="btn btn-back-next btn-default">Previous</button>
+	  		<button ng-hide="firstSlideTrue()" ng-click="next()" type="button" class="btn btn-back-next btn-primary">Next</button>
+		</div>
+	</div>
+</div>

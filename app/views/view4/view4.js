@@ -27,7 +27,9 @@ angular.module('myApp.view4', ['ngRoute'])
     });
 
    	$http.get('/forms/panas.json').success(function (data) {
-        $scope.panas = data;      
+        $scope.panas = data;     
+        $scope.formType = 'vertical-scrolling';
+        $scope.showResponseImages = true; 
         $scope.formLoadAttempt++;   
         $scope.choosePath();       
     })
@@ -49,7 +51,7 @@ angular.module('myApp.view4', ['ngRoute'])
     });
 
     $scope.onboardingContent = [];
-
+    // Abhi to comment 
     $scope.onboardingContent['phq'] = {text:'PHQ intro content', image:'phq8.png'};
 
     $scope.onboardingContent['lss'] = {text:'Life Satisfaction Survey intro content', image:'lss.png'};

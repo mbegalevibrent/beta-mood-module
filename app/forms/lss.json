@@ -2,7 +2,7 @@
     {
         "field_name": "lss_1",
         "form_name": "lss",
-        "section_header": "Tell us how much you or disagree with the following statement. <br/>Please be open and honest in your responding",
+        "section_header": "Tell us how much you or disagree with the following statement. Please be open and honest in your responding",
         "field_type": "radio",
         "field_label": "In most ways my life is close to my ideal. ",
         "select_choices_or_calculations": [
@@ -51,7 +51,7 @@
     },{
         "field_name": "lss_2",
         "form_name": "lss",
-        "section_header": "Tell us how much you or disagree with the following statement. <br/>Please be open and honest in your responding",
+        "section_header": "Tell us how much you or disagree with the following statement. Please be open and honest in your responding",
         "field_type": "radio",
         "field_label": "The conditions of my life are excellent.",
         "select_choices_or_calculations": [
@@ -100,7 +100,7 @@
     },{
         "field_name": "lss_3",
         "form_name": "lss",
-        "section_header": "Tell us how much you or disagree with the following statement. <br/>Please be open and honest in your responding",
+        "section_header": "Tell us how much you or disagree with the following statement. Please be open and honest in your responding",
         "field_type": "radio",
         "field_label": " I am satisfied with my life.",
         "select_choices_or_calculations": [
@@ -149,7 +149,7 @@
     },{
         "field_name": "lss_4",
         "form_name": "lss",
-        "section_header": "Tell us how much you or disagree with the following statement. <br/>Please be open and honest in your responding",
+        "section_header": "Tell us how much you or disagree with the following statement. Please be open and honest in your responding",
         "field_type": "radio",
         "field_label": " So far I have gotten the important things I want in life.",
         "select_choices_or_calculations": [

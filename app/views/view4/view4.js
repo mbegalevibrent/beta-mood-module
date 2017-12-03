@@ -10,11 +10,13 @@ angular.module('myApp.view4', ['ngRoute'])
 }])
 
 .controller('View4Ctrl', ['$scope', '$location', '$http', function($scope,$location,$http) {
+  var moodScore = parseInt(localStorage['mood']);
 
 	$scope.formLoadAttempt = 0;
 	$scope.currentQuestionnaire = [];
   $scope.showQuestions = false;
   $scope.answers = [];
+
 
 	$http.get('/forms/phq9.json').success(function (data) {
         $scope.phq9 = data;
@@ -52,11 +54,12 @@ angular.module('myApp.view4', ['ngRoute'])
     $scope.onboardingContent = [];
     // Abhi to comment 
     $scope.onboardingContent['phq'] = {text:'PHQ intro content', image:'phq8.png'};
-
     $scope.onboardingContent['lss'] = {text:'Life Satisfaction Survey intro content', image:'lss.png'};
-
     $scope.onboardingContent['panas'] = {text:'We are going to ask you to describe different feelings and emotions. On the next few pages, choose the word that best represents how you are feeling right now! ', image:'panas.png'};
-    
+
+    $scope.warning = [];
+    $scope.warning['phq9_9'] = 'This is a warning because the participant selected > 0 on phq9';
+
     $scope.setQuestionArrayValue = function(index,value){
       $scope.answers[index] = value;
       localStorage['answers'] = $scope.answers;
@@ -66,11 +69,11 @@ angular.module('myApp.view4', ['ngRoute'])
 
 
    	$scope.choosePath = function(){
-   		var moodScore = parseInt(localStorage['mood']);
    		if ($scope.formLoadAttempt == 3){
 
 	   		if (moodScore < 3){
 	   			$scope.currentQuestionnaire = $scope.phq9;
+          $scope.showNext = 'panas';
           $scope.onboardingContentName = 'phq';
 	   		} else if (moodScore > 3){
 	   			$scope.currentQuestionnaire = $scope.lss;
@@ -84,7 +87,6 @@ angular.module('myApp.view4', ['ngRoute'])
 
         $scope.currentOnboardingText = $scope.onboardingContent[$scope.onboardingContentName].text;
         $scope.currentOnboardingImage = $scope.onboardingContent[$scope.onboardingContentName].image;
-   
    			$scope.currentQuestionIndex = 0;
    			$scope.setCurrentQuestion($scope.currentQuestionIndex);
    			
@@ -109,7 +111,13 @@ angular.module('myApp.view4', ['ngRoute'])
 	}
 
   $scope.nextPage = function(){
+
+      if (moodScore < 3 || moodScore > 3){
+          localStorage['mood'] = 3;
+          $location.url('/view4/');
+      } else {
       $location.url('/view5/');
+    }
   }
 
 	$scope.back = function(){

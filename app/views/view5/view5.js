@@ -16,8 +16,11 @@ angular.module('myApp.view5', ['ngRoute'])
 	// we start by triaging feedback to mood alone
 	// then we triage to a "gross score" of lss, phq, panas
 	// then we triage to a "per item" of lss, phq, panas	
+	// if we decide that the form is 
 
-	feedbackOptions['mood_neutral'] = 'Abhi text';
+	
+
+	feedbackOptions['mood_neutral'] = 'You said you had a neutral mood!';
 	feedbackOptions['mood_negative'] = 'Abhi text';
 	feedbackOptions['mood_positive'] = 'Abhi text';
 	feedbackOptions['phq_gross_score_lt_5'] = 'Abhi text';

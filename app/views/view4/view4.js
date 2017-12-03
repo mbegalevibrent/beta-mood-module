@@ -28,8 +28,6 @@ angular.module('myApp.view4', ['ngRoute'])
 
    	$http.get('/forms/panas.json').success(function (data) {
         $scope.panas = data;     
-        $scope.formDisplayType = 'vertical-scrolling';
-        $scope.showResponseImages = true; 
         $scope.formLoadAttempt++;   
         $scope.choosePath();       
     })
@@ -75,6 +73,8 @@ angular.module('myApp.view4', ['ngRoute'])
 	   		} else if (moodScore > 3){
 	   			$scope.currentQuestionnaire = $scope.panas;
           $scope.onboardingContentName = 'panas';
+          $scope.formDisplayType = 'vertical-scrolling';
+          $scope.showResponseImages = true; 
 	   		}
 
         $scope.currentOnboardingText = $scope.onboardingContent[$scope.onboardingContentName].text;
@@ -87,7 +87,7 @@ angular.module('myApp.view4', ['ngRoute'])
    	}
 
     $scope.startQuestions= function () {
-      $scope.showQuestions = true;
+      $scope.showQuestions = true; debugger;
     }
 
    	$scope.setCurrentQuestion = function(index){

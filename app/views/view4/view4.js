@@ -99,9 +99,13 @@ angular.module('myApp.view4', ['ngRoute'])
 			$scope.currentQuestionIndex++;
 			$scope.setCurrentQuestion($scope.currentQuestionIndex);
 		} else if ($scope.currentQuestionnaire.length-1 == $scope.currentQuestionIndex){ 
-			$location.url('/view5/');
+      $scope.nextPage();
 		}
 	}
+
+  $scope.nextPage = function(){
+      $location.url('/view5/');
+  }
 
 	$scope.back = function(){
 		if ($scope.currentQuestionIndex != 0){

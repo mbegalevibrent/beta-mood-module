@@ -85,7 +85,15 @@ body {
     border-collapse: collapse;
 }
 
+.face-unselected {
+	opacity:.7;
+}
+
 .selected {
 	font-weight: bold;
 	color: #1f1f5d;
+}
+
+.selected img {
+	opacity: 1 !important;
 }

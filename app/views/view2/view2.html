@@ -5,11 +5,11 @@
 	<hr/>
 	<div class="question-options">
 		<div ng-repeat="option in currentQuestion.select_choices_or_calculations">
-		<label ng-click="setValue(option.code)" ng-class="{selected: option.code === currentQuestion.answer}">
+		<label ng-click="setValue(option.code)" ng-class="{selected: option.code == currentQuestion.answer}">
 			<table>
 				<tr>
 					<td style="width:20%;">
-		  				<img src="img/{{option.image}}" class="span20">
+		  				<img src="img/{{option.image}}" class="span20 face-unselected">
 		  			</td>
 		  			<td>
 		  				{{option.label}}

@@ -67,10 +67,10 @@ angular.module('myApp.view4', ['ngRoute'])
 	   		if (moodScore < 3){
 	   			$scope.currentQuestionnaire = $scope.phq9;
           $scope.onboardingContentName = 'phq';
-	   		} else if (moodScore == 3){
+	   		} else if (moodScore > 3){
 	   			$scope.currentQuestionnaire = $scope.lss;
           $scope.onboardingContentName = 'lss';
-	   		} else if (moodScore > 3){
+	   		} else if (moodScore == 3){
 	   			$scope.currentQuestionnaire = $scope.panas;
           $scope.onboardingContentName = 'panas';
           $scope.formDisplayType = 'vertical-scrolling';

@@ -2,25 +2,37 @@
     {
         "field_name": "lss_1",
         "form_name": "lss",
-        "section_header": "Over the past two weeks, how often have you been bothered by any of the following problems ",
+        "section_header": "Tell us how much you or disagree with the following statement. <br/>Please be open and honest in your responding",
         "field_type": "radio",
-        "field_label": "Life satisfaction!",
+        "field_label": "In most ways my life is close to my ideal. ",
         "select_choices_or_calculations": [
             {
-                "code": "0",
-                "label": "Not at all"
+                "code": "1",
+                "label": "Strongly Disagree"
             },
             {
-                "code": " 1",
-                "label": "Several days"
+                "code": "2",
+                "label": "Strongly Agree"
             },
             {
-                "code": " 2",
-                "label": "More than half the days"
+                "code": "3",
+                "label": "Slightly Disagree"
             },
             {
-                "code": " 3",
-                "label": "Nearly every day"
+                "code": "4",
+                "label": "Neither Agree nor Disagree"
+            },
+            {
+                "code": "5",
+                "label": "SLightly Agree"
+            },
+            {
+                "code": "6",
+                "label": "Agree"
+            },
+            {
+                "code": "7",
+                "label": "Strongly Agree"
             }
         ],
         "field_note": "",
@@ -33,6 +45,202 @@
         "custom_alignment": "",
         "question_number": "",
         "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "lss_2",
+        "form_name": "lss",
+        "section_header": "Tell us how much you or disagree with the following statement. <br/>Please be open and honest in your responding",
+        "field_type": "radio",
+        "field_label": "The conditions of my life are excellent.",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Strongly Disagree"
+            },
+            {
+                "code": "2",
+                "label": "Strongly Agree"
+            },
+            {
+                "code": "3",
+                "label": "Slightly Disagree"
+            },
+            {
+                "code": "4",
+                "label": "Neither Agree nor Disagree"
+            },
+            {
+                "code": "5",
+                "label": "SLightly Agree"
+            },
+            {
+                "code": "6",
+                "label": "Agree"
+            },
+            {
+                "code": "7",
+                "label": "Strongly Agree"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "phq8",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "lss_3",
+        "form_name": "lss",
+        "section_header": "Tell us how much you or disagree with the following statement. <br/>Please be open and honest in your responding",
+        "field_type": "radio",
+        "field_label": " I am satisfied with my life.",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Strongly Disagree"
+            },
+            {
+                "code": "2",
+                "label": "Strongly Agree"
+            },
+            {
+                "code": "3",
+                "label": "Slightly Disagree"
+            },
+            {
+                "code": "4",
+                "label": "Neither Agree nor Disagree"
+            },
+            {
+                "code": "5",
+                "label": "SLightly Agree"
+            },
+            {
+                "code": "6",
+                "label": "Agree"
+            },
+            {
+                "code": "7",
+                "label": "Strongly Agree"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "lss",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "lss_4",
+        "form_name": "lss",
+        "section_header": "Tell us how much you or disagree with the following statement. <br/>Please be open and honest in your responding",
+        "field_type": "radio",
+        "field_label": " So far I have gotten the important things I want in life.",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Strongly Disagree"
+            },
+            {
+                "code": "2",
+                "label": "Strongly Agree"
+            },
+            {
+                "code": "3",
+                "label": "Slightly Disagree"
+            },
+            {
+                "code": "4",
+                "label": "Neither Agree nor Disagree"
+            },
+            {
+                "code": "5",
+                "label": "SLightly Agree"
+            },
+            {
+                "code": "6",
+                "label": "Agree"
+            },
+            {
+                "code": "7",
+                "label": "Strongly Agree"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "lss",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },{
+        "field_name": "lss_5",
+        "form_name": "lss",
+        "section_header": "If I could live my life over, I would change almost nothing.",
+        "field_type": "radio",
+        "field_label": " I am satisfied with my life.",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Strongly Disagree"
+            },
+            {
+                "code": "2",
+                "label": "Strongly Agree"
+            },
+            {
+                "code": "3",
+                "label": "Slightly Disagree"
+            },
+            {
+                "code": "4",
+                "label": "Neither Agree nor Disagree"
+            },
+            {
+                "code": "5",
+                "label": "SLightly Agree"
+            },
+            {
+                "code": "6",
+                "label": "Agree"
+            },
+            {
+                "code": "7",
+                "label": "Strongly Agree"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "lss",
         "matrix_ranking": "",
         "field_annotation": "",
         "evaluated_logic": ""

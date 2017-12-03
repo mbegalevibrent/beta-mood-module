@@ -41,22 +41,25 @@
 	</div>
 </div>
 
-<div id="verticalScrolling" ng-if="formDisplayType == 'verticalScrolling'">
+<div id="vertical-scrolling" ng-if="showQuestions && formDisplayType == 'vertical-scrolling'">
 	<div class="header" ng-show="currentQuestion.section_header != ''" >
 		{{currentQuestion.section_header}}
 	</div>
 	<div class="questions"> 
 
-	<div class="question" ng-repeat="question in currentQuestionnaire">
-	<div class="question-label">
-			{{currentQuestion.field_label}}
+		<div class="question" ng-repeat="question in currentQuestionnaire">
+			<div class="question-label">
+					{{question.field_label}}
+			</div>
+			<table style="width:100%;">
+				<tr>
+		  			<td ng-repeat="face in [1,2,3,4,5]" style="width:20%;">
+						<label ng-click="saveValue(face)">
+							<img src="img/{{faceLibrary[face]}}"/>
+						</label>
+					</td>
+				</tr>
+			</table>
+		</div>
 	</div>
-	<table>
-		<tr>
-  			<td ng-repeat="option in question.select_choices_or_calculations track by index" style="20%;">
-			<label ng-click="saveValue(option.value)"><img src="img/{{faceLibrary[index]}}"/></label></td>
-			</tr>
-		</table>
-	</div>
-</div>
 </div>

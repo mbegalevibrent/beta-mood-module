@@ -15,8 +15,8 @@ angular.module('myApp.view4', ['ngRoute'])
 	$scope.currentQuestionnaire = [];
   $scope.showQuestions = false;
 
-	$http.get('/forms/phq8.json').success(function (data) {
-        $scope.phq8 = data;
+	$http.get('/forms/phq9.json').success(function (data) {
+        $scope.phq9 = data;
         $scope.formLoadAttempt++; 
         $scope.choosePath();       
     })
@@ -65,7 +65,7 @@ angular.module('myApp.view4', ['ngRoute'])
    		if ($scope.formLoadAttempt == 3){
 
 	   		if (moodScore < 3){
-	   			$scope.currentQuestionnaire = $scope.phq8;
+	   			$scope.currentQuestionnaire = $scope.phq9;
           $scope.onboardingContentName = 'phq';
 	   		} else if (moodScore == 3){
 	   			$scope.currentQuestionnaire = $scope.lss;
@@ -87,7 +87,7 @@ angular.module('myApp.view4', ['ngRoute'])
    	}
 
     $scope.startQuestions= function () {
-      $scope.showQuestions = true; debugger;
+      $scope.showQuestions = true;
     }
 
    	$scope.setCurrentQuestion = function(index){
@@ -105,7 +105,7 @@ angular.module('myApp.view4', ['ngRoute'])
 
 	$scope.back = function(){
 		if ($scope.currentQuestionIndex != 0){
-			$scope.currentQuestionIndex++;
+			$scope.currentQuestionIndex--;
 			$scope.setCurrentQuestion($scope.currentQuestionIndex);
 		} else {
 			$location.url('/view4/');

@@ -49,13 +49,13 @@
 
 		<div class="question" ng-repeat="question in currentQuestionnaire">
 			<div class="question-label">
-					{{question.field_label}}
+			 {{question.field_label}}
 			</div>
-			<table style="width:100%;">
+			<table style="width:100%; padding-bottom:1em;">
 				<tr>
-		  			<td ng-repeat="face in [1,2,3,4,5]" style="width:20%;">
+		  			<td ng-repeat="face in [0,1,2,3,4,5]" style="width:20%;" ng-show="face >= 0">
 						<label ng-click="saveValue(face)">
-							<img src="img/{{faceLibrary[face]}}"/>
+							<img src="img/{{faceLibrary[face]}}" style="width:90%;margin-left:5%;margin-right:5%;"/>
 						</label>
 					</td>
 				</tr>

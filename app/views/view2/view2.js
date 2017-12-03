@@ -15,11 +15,11 @@ angular.module('myApp.view2', ['ngRoute'])
 	$scope.currentQuestion.field_label = 'How is your mood right now?';
 	$scope.currentQuestion.field_name = "mood";
 	$scope.currentQuestion.select_choices_or_calculations = [];
-	$scope.currentQuestion.select_choices_or_calculations[0] = {code:0, label:'Bad', image:'moodface1.png'};
-	$scope.currentQuestion.select_choices_or_calculations[1] = {code:1, label:'Somewhat Bad', image:'moodface2.png'};
-	$scope.currentQuestion.select_choices_or_calculations[2] = {code:2, label:'Neutral', image:'moodface3.png'};
-	$scope.currentQuestion.select_choices_or_calculations[3] = {code:3, label:'Somewhat Good', image:'moodface4.png'};
-	$scope.currentQuestion.select_choices_or_calculations[4] = {code:4, label:'Good', image:'moodface5.png'};
+	$scope.currentQuestion.select_choices_or_calculations[0] = {code:1, label:'Bad', image:'moodface1.png'};
+	$scope.currentQuestion.select_choices_or_calculations[1] = {code:2, label:'Somewhat Bad', image:'moodface2.png'};
+	$scope.currentQuestion.select_choices_or_calculations[2] = {code:3, label:'Neutral', image:'moodface3.png'};
+	$scope.currentQuestion.select_choices_or_calculations[3] = {code:4, label:'Somewhat Good', image:'moodface4.png'};
+	$scope.currentQuestion.select_choices_or_calculations[4] = {code:5, label:'Good', image:'moodface5.png'};
 	$scope.currentQuestion.answer = null;
 
 

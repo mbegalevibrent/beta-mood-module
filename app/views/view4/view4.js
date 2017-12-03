@@ -28,7 +28,7 @@ angular.module('myApp.view4', ['ngRoute'])
 
    	$http.get('/forms/panas.json').success(function (data) {
         $scope.panas = data;     
-        $scope.formType = 'vertical-scrolling';
+        $scope.formDisplayType = 'vertical-scrolling';
         $scope.showResponseImages = true; 
         $scope.formLoadAttempt++;   
         $scope.choosePath();       
@@ -57,6 +57,10 @@ angular.module('myApp.view4', ['ngRoute'])
     $scope.onboardingContent['lss'] = {text:'Life Satisfaction Survey intro content', image:'lss.png'};
 
     $scope.onboardingContent['panas'] = {text:'We are going to ask you to describe different feelings and emotions. On the next few pages, choose the word that best represents how you are feeling right now! ', image:'panas.png'};
+
+
+    $scope.faceLibrary = ['face1.png','face2.png', 'face3.png', 'face4.png', 'face5.png'];
+
 
    	$scope.choosePath = function(){
    		var moodScore = parseInt(localStorage['mood']);

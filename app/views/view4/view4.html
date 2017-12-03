@@ -8,7 +8,7 @@
 	</div>
 </div>
 
-<div ng-show="showQuestions">
+<div ng-show="showQuestions && !formDisplayType">
 	<div class="question">
 		<div class="header" ng-show="currentQuestion.section_header != ''" >
 		{{currentQuestion.section_header}}
@@ -18,7 +18,7 @@
 			{{currentQuestion.field_label}}
 		</div>
 		<hr/>
-		<div class="question-options">
+		<div class="question-options" ng-if="!formDisplayType">
 			<div ng-repeat="option in currentQuestion.select_choices_or_calculations">
 			<label ng-click="saveValue(option.value)">
 				<table>
@@ -30,6 +30,7 @@
 			 </label>
 			</div>
 		</div>
+
 	</div>
 	<div class="bottom-nav">
 		<div class="btn-group" role="group" aria-label="...">
@@ -38,4 +39,24 @@
 	  		<button ng-hide="firstSlideTrue()" ng-click="next()" type="button" class="btn btn-back-next btn-primary">Next</button>
 		</div>
 	</div>
+</div>
+
+<div id="verticalScrolling" ng-if="formDisplayType == 'verticalScrolling">
+	<div class="header" ng-show="currentQuestion.section_header != ''" >
+		{{currentQuestion.section_header}}
+	</div>
+	<div class="questions"> 
+
+	<div class="question" ng-repeat="question in currentQuestionnaire">
+	<div class="question-label">
+			{{currentQuestion.field_label}}
+	</div>
+	<table>
+		<tr>
+  			<td ng-repeat="option in question.select_choices_or_calculations track by index" style="20%;">
+			<label ng-click="saveValue(option.value)"><img src="img/{{faceLibrary[index]}}"/></label></td>
+			</tr>
+		</table>
+	</div>
+</div>
 </div>

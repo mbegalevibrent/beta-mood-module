@@ -58,8 +58,8 @@ angular.module('myApp.view4', ['ngRoute'])
     $scope.onboardingContent['panas'] = {text:'We are going to ask you to describe different feelings and emotions. On the next few pages, choose the word that best represents how you are feeling right now! ', image:'panas.png'};
 
 
-    $scope.phq9WarningTitle = 'PHQ 9 Warning Title';
-    $scope.phq9WarningContents = 'This is a warning because the participant selected > 0 on phq9';
+    $scope.phq9WarningTitle = 'Risks';
+    $scope.phq9WarningContents = '<p><strong>Get immediate help by phone. &nbsp;If you&rsquo;re thinking about&nbsp;suicide&nbsp;or would like emotional support, help is available 24/7. &nbsp;Call the&nbsp;National&nbsp;Suicide&nbsp;Prevention Line (participant can click on link to 1-800-273-TALK).</strong></p>';
 
     $scope.setQuestionArrayValue = function(index,value){
       $scope.answers[index] = value;

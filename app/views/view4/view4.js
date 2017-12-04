@@ -9,7 +9,7 @@ angular.module('myApp.view4', ['ngRoute'])
   });
 }])
 
-.controller('View4Ctrl', ['$scope', '$location', '$http', '$window', function($scope,$location,$http) {
+.controller('View4Ctrl', ['$scope', '$location', '$http', '$window', '$sce', function($scope,$location,$http,$sce) {
   var moodScore = parseInt(localStorage['mood']);
 
 	$scope.formLoadAttempt = 0;
@@ -62,7 +62,7 @@ angular.module('myApp.view4', ['ngRoute'])
     $scope.onboardingContent['panas'] = {text:'We are going to ask you to describe different feelings and emotions. On the next few pages, choose the word that best represents how you are feeling right now! ', image:'panas.png'};
 
 
-    $scope.phq9WarningTitle = 'Risks';
+    $scope.phq9WarningTitle = '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Risks';
     $scope.phq9WarningContents = '<p><strong>Get immediate help by phone. &nbsp;If you&rsquo;re thinking about&nbsp;suicide&nbsp;or would like emotional support, help is available 24/7. &nbsp;Call the&nbsp;National&nbsp;Suicide&nbsp;Prevention Line (participant can click on link to 1-800-273-TALK).</strong></p>';
 
     $scope.setQuestionArrayValue = function(index,value){

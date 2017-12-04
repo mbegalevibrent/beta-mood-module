@@ -27,12 +27,11 @@ angular.module('myApp.view5', ['ngRoute'])
 	feedbackOptions['lss_happy'] = 'Abhi text';
 
 
-	MILD_DEPRESSION = '<h4>Your current PHQ-9 score {score}&nbsp;shows symptoms of moderate depression.</h4> <p><strong>Next Steps</strong></p> <ul> <li>Track your daily mood for next #x TBD weeks&nbsp;</li> </ul> <p><strong>How to find help?</strong></p> <ul><li>PMI related clinical helpline?</li> </ul><p>&nbsp;</p>'
+	var MILD_DEPRESSION = '<h4>Your current PHQ-9 score {score}&nbsp;shows symptoms of moderate depression.</h4> <p><strong>Next Steps</strong></p> <ul> <li>Track your daily mood for next #x TBD weeks&nbsp;</li> </ul> <p><strong>How to find help?</strong></p> <ul><li>PMI related clinical helpline?</li> </ul><p>&nbsp;</p>';
 
-	MODERATE_DEPRESSION = '<h4>Your current PHQ-9 score {score}&nbsp;shows symptoms of moderate depression.</h4> <p><strong>Next Steps</strong></p> <ul> <li>Track your daily mood for next #x TBD weeks&nbsp;</li> </ul> <p><strong>How to find help?</strong></p> <ul><li>PMI related clinical helpline?</li> </ul><p>&nbsp;</p>'
+	var MODERATE_DEPRESSION = '<h4>Your current PHQ-9 score {score}&nbsp;shows symptoms of moderate depression.</h4> <p><strong>Next Steps</strong></p> <ul> <li>Track your daily mood for next #x TBD weeks&nbsp;</li> </ul> <p><strong>How to find help?</strong></p> <ul><li>PMI related clinical helpline?</li> </ul><p>&nbsp;</p>';
 
-	MAJOR_DEPRESSION = '<h4>Your current PHQ-9 score {score}&nbsp;shows symptoms of moderate depression.</h4> <p><strong>Next Steps</strong></p> <ul> <li>Track your daily mood for next #x TBD weeks&nbsp;</li> </ul> <p><strong>How to find help?</strong></p> <ul><li>PMI related clinical helpline?</li> </ul><p>&nbsp;</p>'
-
+	var MAJOR_DEPRESSION = '<h4>Your current PHQ-9 score {score}&nbsp;shows symptoms of moderate depression.</h4> <p><strong>Next Steps</strong></p> <ul> <li>Track your daily mood for next #x TBD weeks&nbsp;</li> </ul> <p><strong>How to find help?</strong></p> <ul><li>PMI related clinical helpline?</li> </ul><p>&nbsp;</p>';
 
 
 	// Two options

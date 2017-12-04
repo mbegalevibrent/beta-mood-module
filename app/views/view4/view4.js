@@ -53,7 +53,7 @@ angular.module('myApp.view4', ['ngRoute'])
 
     $scope.onboardingContent = [];
     // Abhi to comment 
-    PHQ9_INTRO = '<p><b> placeholder PHQ-9: a depression screening tool</b><br/>The Patient Health Questionnaire, or PHQ-9, is a clinically validated 9-question screening tool used widely by doctors and health professionals. It takes about 5 minutes to answer the questions and get results.</p>'
+    var PHQ9_INTRO = '<p><b> placeholder PHQ-9: a depression screening tool</b><br/>The Patient Health Questionnaire, or PHQ-9, is a clinically validated 9-question screening tool used widely by doctors and health professionals. It takes about 5 minutes to answer the questions and get results.</p>';
 
     $scope.onboardingContent['phq'] = {text: PHQ9_INTRO, image:'phq8.png'};
     $scope.onboardingContent['lss'] = {text:'Life Satisfaction Survey intro content', image:'lss.png'};

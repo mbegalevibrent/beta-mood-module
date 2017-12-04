@@ -1,0 +1,30 @@
+<div class="top-panel">
+
+	<div class="question-label">
+		How many times per day can you answer a question about your mood?
+	</div>
+	<hr/>
+	<div class="question-options">
+		<div ng-repeat="number in [1,2,3,4,5,6,7]">
+		<label>
+			<table>
+				<tr>
+					<td style="width:20%;">
+		  				<input type="radio" name="prompt">
+		  			</td>
+		  			<td>
+		  				{{number}} <ng-pluralize count="number" when="{'1': 'time', 'other': 'times'}"></ng-pluralize> per day
+		  			</td>
+	  			</tr>
+  			</table>
+		 </label>
+		</div>
+	</div>
+</div>
+
+</div>
+<div class="bottom-nav">
+	<div class="btn-group" role="group" aria-label="...">
+  		<button ng-click="next()" type="button" {{nextDisabled}} class="btn btn-full btn-primary">Continue</button>
+	</div>
+</div>

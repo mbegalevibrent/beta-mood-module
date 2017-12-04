@@ -1,0 +1,27 @@
+<div class="question">
+	<div class="question-label">
+		{{currentQuestion.field_label}}
+	</div>
+	<hr/>
+	<div class="question-options">
+		<div ng-repeat="option in currentQuestion.select_choices_or_calculations">
+		<label ng-click="setValue(option.code)" ng-class="{selected: option.code == currentQuestion.answer}">
+			<table>
+				<tr>
+					<td style="width:20%;">
+		  				<img src="img/{{option.image}}" class="span20 face-unselected">
+		  			</td>
+		  			<td>
+		  				{{option.label}}
+		  			</td>
+	  			</tr>
+  			</table>
+		 </label>
+		</div>
+	</div>
+</div>
+<div class="bottom-nav">
+	<div class="btn-group" role="group" aria-label="...">
+  		<button ng-click="next()" type="button" ng-disabled="!currentQuestion.answer" class="btn btn-full btn-primary">Continue</button>
+	</div>
+</div>

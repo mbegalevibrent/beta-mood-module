@@ -36,8 +36,7 @@
         "matrix_ranking": "",
         "field_annotation": "",
         "evaluated_logic": ""
-    },
-    {
+    },{
         "field_name": "phq9_2",
         "form_name": "phq9",
         "section_header": "Over the past two weeks, how often have you been bothered by any of the following problems",
@@ -74,8 +73,7 @@
         "matrix_ranking": "",
         "field_annotation": "",
         "evaluated_logic": ""
-    },
-    {
+    },{
         "field_name": "phq9_3",
         "form_name": "phq9",
         "section_header": "Over the past two weeks, how often have you been bothered by any of the following problems",
@@ -112,8 +110,7 @@
         "matrix_ranking": "",
         "field_annotation": "",
         "evaluated_logic": ""
-    },
-    {
+    },{
         "field_name": "phq9_4",
         "form_name": "phq9",
         "section_header": "Over the past two weeks, how often have you been bothered by any of the following problems",
@@ -150,8 +147,7 @@
         "matrix_ranking": "",
         "field_annotation": "",
         "evaluated_logic": ""
-    },
-    {
+    },{
         "field_name": "phq9_5",
         "form_name": "phq9",
         "section_header": "Over the past two weeks, how often have you been bothered by any of the following problems",
@@ -188,8 +184,7 @@
         "matrix_ranking": "",
         "field_annotation": "",
         "evaluated_logic": ""
-    },
-    {
+    },{
         "field_name": "phq9_6",
         "form_name": "phq9",
         "section_header": "Over the past two weeks, how often have you been bothered by any of the following problems",
@@ -226,8 +221,7 @@
         "matrix_ranking": "",
         "field_annotation": "",
         "evaluated_logic": ""
-    },
-    {
+    },{
         "field_name": "phq9_7",
         "form_name": "phq9",
         "section_header": "Over the past two weeks, how often have you been bothered by any of the following problems",
@@ -264,8 +258,7 @@
         "matrix_ranking": "",
         "field_annotation": "",
         "evaluated_logic": ""
-    },
-    {
+    },{
         "field_name": "phq9_8",
         "form_name": "phq9",
         "section_header": "Over the past two weeks, how often have you been bothered by any of the following problems",

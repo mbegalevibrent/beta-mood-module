@@ -19,9 +19,22 @@ angular.module('myApp.view5', ['ngRoute'])
 	// if we decide that the form is 
 	// Ref- Kroenke, K., Spitzer, R. L., & Williams, J. B. (2001). The PHQ-9: Validity of a brief depression severity measure. Journal of General Internal Medicine, 169, 606–613.
 
-	feedbackOptions['mood_neutral'] = 'You said you had a neutral mood!';
-	feedbackOptions['mood_negative'] = 'Abhi text';
-	feedbackOptions['mood_positive'] = 'Abhi text';
+	$scope.mood = parseInt(localStorage['mood']);
+
+	var prioritizedFeedback = [];
+
+	if ($scope.mood <3) {
+		prioritizedFeedback.push('mood_negative');
+	} else if($scope.mood == 3){
+		prioritizedFeedback.push('mood_neutral');
+
+	} else if ($scope.mood >3){
+		prioritizedFeedback.push('mood_positive');
+	}
+
+	feedbackOptions['mood_neutral'] = 'Feedback when a participant is having a neutral mood.';
+	feedbackOptions['mood_negative'] = 'Feedback when a participant is having a bad mood.';
+	feedbackOptions['mood_positive'] = 'Feedback when a participant is having a good mood.';
 	feedbackOptions['phq_item_1'] = 'something about being down, depressed or hopeless';
 	feedbackOptions['panas_emotion'] = 'Abhi text';
 	feedbackOptions['lss_happy'] = 'Abhi text';
@@ -32,7 +45,6 @@ angular.module('myApp.view5', ['ngRoute'])
 	var MODERATE_DEPRESSION = '<h4>Your current PHQ-9 score {score}&nbsp;shows symptoms of moderate depression.</h4> <p><strong>Next Steps</strong></p> <ul> <li>Track your daily mood for next #x TBD weeks&nbsp;</li> </ul> <p><strong>How to find help?</strong></p> <ul><li>PMI related clinical helpline?</li> </ul><p>&nbsp;</p>';
 
 	var MAJOR_DEPRESSION = '<h4>Your current PHQ-9 score {score}&nbsp;shows symptoms of moderate depression.</h4> <p><strong>Next Steps</strong></p> <ul> <li>Track your daily mood for next #x TBD weeks&nbsp;</li> </ul> <p><strong>How to find help?</strong></p> <ul><li>PMI related clinical helpline?</li> </ul><p>&nbsp;</p>';
-
 
 	// Two options
 	// 1
@@ -58,7 +70,7 @@ angular.module('myApp.view5', ['ngRoute'])
 
 
 
-	$scope.selectedFeedbackLabel = function(){return 'PHQ_Score_lt_5'}
+	$scope.selectedFeedbackLabel = function(){return prioritizedFeedback[0]}
     $scope.currentText = feedbackOptions[$scope.selectedFeedbackLabel()];
 	$scope.next = function(){
 		$location.url("/view1/");

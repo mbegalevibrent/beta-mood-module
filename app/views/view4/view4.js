@@ -9,12 +9,14 @@ angular.module('myApp.view4', ['ngRoute'])
   });
 }])
 
-.controller('View4Ctrl', ['$scope', '$location', '$http', function($scope,$location,$http) {
+.controller('View4Ctrl', ['$scope', '$location', '$http', '$window', function($scope,$location,$http) {
   var moodScore = parseInt(localStorage['mood']);
 
 	$scope.formLoadAttempt = 0;
 	$scope.currentQuestionnaire = [];
   $scope.showQuestions = false;
+  $scope.maxQuestionIndex = 0;
+  $scope.questionsFinished = false;
   $scope.answers = [];
 
 
@@ -65,6 +67,16 @@ angular.module('myApp.view4', ['ngRoute'])
 
     $scope.setQuestionArrayValue = function(index,value){
       $scope.answers[index] = value;
+      $scope.currentQuestionIndex = index + 1;
+      if($scope.maxQuestionIndex < $scope.currentQuestionIndex){
+        $scope.maxQuestionIndex = $scope.currentQuestionIndex;
+        $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+      }
+
+      if (index+1 == $scope.currentQuestionnaire.length){
+        $scope.questionsFinished = true;
+      }
+      
       localStorage['answers'] = $scope.answers;
     }
 
@@ -72,6 +84,8 @@ angular.module('myApp.view4', ['ngRoute'])
 
       if ($scope.onboardingContentName == 'phq' && field_name == 'phq9_9' && parseInt(value) > 0){
           $scope.showPH9Warning();
+      } else {
+        $scope.next();
       }
 
     }

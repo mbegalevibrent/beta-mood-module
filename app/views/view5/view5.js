@@ -60,7 +60,10 @@ angular.module('myApp.view5', ['ngRoute'])
 
 	$scope.selectedFeedbackLabel = function(){return 'PHQ_Score_lt_5'}
     $scope.currentText = feedbackOptions[$scope.selectedFeedbackLabel()];
-	$scope.next = function(){window.location.href= 'https://participant.joinallofus.org/';};
+	$scope.next = function(){
+		$location.url("/view1/");
+		// window.location.href= 'https://participant.joinallofus.org/';
+	};
 
 }]);
 

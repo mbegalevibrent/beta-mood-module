@@ -20,7 +20,7 @@
 		<hr/>
 		<div class="question-options" ng-if="!formDisplayType">
 			<div ng-repeat="option in currentQuestion.select_choices_or_calculations">
-			<label ng-click="saveValue(option.value)">
+			<label ng-click="saveValue(option.code, currentQuestion.field_name)">
 				<table>
 					<tr>
 						<td><input type="radio" name="{{currentQuestion.field_name}}"/>&nbsp;&nbsp;</td>
@@ -30,7 +30,7 @@
 			 </label>
 			</div>
 		</div>
-		
+
 	</div>
 	<div class="bottom-nav">
 		<div class="btn-group" role="group" aria-label="...">
@@ -65,4 +65,20 @@
 	</div>
 	<button ng-click="nextPage()" type="button" class="btn btn-full btn-primary">Continue</button>
 
+</div>
+
+
+
+<div class="modal fade" id="phq9Warning" tabindex="-1" role="dialog" aria-labelledby="phq9Warning">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{phq9WarningTitle}}</h4>
+      </div>
+      <div class="modal-body">
+        {{phq9WarningContents}}
+      </div>
+    </div>
+  </div>
 </div>

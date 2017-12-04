@@ -57,12 +57,27 @@ angular.module('myApp.view4', ['ngRoute'])
     $scope.onboardingContent['lss'] = {text:'Life Satisfaction Survey intro content', image:'lss.png'};
     $scope.onboardingContent['panas'] = {text:'We are going to ask you to describe different feelings and emotions. On the next few pages, choose the word that best represents how you are feeling right now! ', image:'panas.png'};
 
-    $scope.warning = [];
-    $scope.warning['phq9_9'] = 'This is a warning because the participant selected > 0 on phq9';
+
+    $scope.phq9WarningTitle = 'PHQ 9 Warning Title';
+    $scope.phq9WarningContents = 'This is a warning because the participant selected > 0 on phq9';
 
     $scope.setQuestionArrayValue = function(index,value){
       $scope.answers[index] = value;
       localStorage['answers'] = $scope.answers;
+    }
+
+    $scope.saveValue = function(value, field_name){
+
+      if ($scope.onboardingContentName == 'phq' && field_name == 'phq9_9' && parseInt(value) > 0){
+          $scope.showPH9Warning();
+      }
+
+    }
+
+
+
+    $scope.showPH9Warning = function(){
+      $('#phq9Warning').modal();
     }
 
     $scope.faceLibrary = ['face1.png','face2.png', 'face3.png', 'face4.png', 'face5.png'];

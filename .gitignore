@@ -1,6 +1,7 @@
 logs/*
 !.gitkeep
 **/node_modules/
+**/mobile_app/
 **/bower_components/
 tmp
 *.DS_Store

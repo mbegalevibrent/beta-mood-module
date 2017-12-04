@@ -63,7 +63,7 @@ angular.module('myApp.view4', ['ngRoute'])
 
 
     $scope.phq9WarningTitle = '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Risks';
-    $scope.phq9WarningContents = '<p><strong>Get immediate help by phone. &nbsp;If you&rsquo;re thinking about&nbsp;suicide&nbsp;or would like emotional support, help is available 24/7. &nbsp;Call the&nbsp;National&nbsp;Suicide&nbsp;Prevention Line (participant can click on link to 1-800-273-TALK).</strong></p>';
+    $scope.phq9WarningContents = '<p>Get immediate help by phone. If you&rsquo;re thinking about suicide or would like emotional support, help is available 24/7.</p><p> If you need help:<br/> <a class="btn btn-primary" phone:"+1-800-273-TALK">Call the National Suicide Prevention Line</a></p>';
 
     $scope.setQuestionArrayValue = function(index,value){
       $scope.answers[index] = value;

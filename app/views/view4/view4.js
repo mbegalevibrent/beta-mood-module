@@ -20,10 +20,10 @@ angular.module('myApp.view4', ['ngRoute'])
   $scope.faceLibrary = ['face1.png','face2.png', 'face3.png', 'face4.png', 'face5.png'];
   
   // Abhi to comment 
-  var PHQ9_INTRO = '<p><b> placeholder PHQ-9: a depression screening tool</b><br/>The Patient Health Questionnaire, or PHQ-9, is a clinically validated 9-question screening tool used widely by doctors and health professionals. It takes about 5 minutes to answer the questions and get results.</p>';
+  var PHQ9_INTRO = 'We are going to ask you some questions that about different issues you may be experiencing. These questions have been commonly used to help clinicians understand your mental health. This usually takes around 5 minutes.';
   $scope.onboardingContent['phq'] = {text: PHQ9_INTRO, image:'phq8.png'};
-  $scope.onboardingContent['lss'] = {text:'Life Satisfaction Survey intro content', image:'lss.png'};
-  $scope.onboardingContent['panas'] = {text:'We are going to ask you to describe different feelings and emotions. On the next few pages, choose the word that best represents how you are feeling right now! ', image:'panas.png'};
+  $scope.onboardingContent['lss'] = {text:'We are going to ask you some questions that will help us understand how happy you feel on your current life\'s path and should take around 5 minutes.', image:'lss.png'};
+  $scope.onboardingContent['panas'] = {text:'Once a week we are going to ask you some questions that describe different feelings and emotions. Read each item and then list the number from the scale below next to each word. Indicate to what extent you feel this way right now, that is, at the present moment OR indicate the extent you have felt this way over the past week (circle the instructions you followed when taking this measure). This may take up to 10 minutes.', image:'panas.png'};
   $scope.phq9WarningTitle = '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Risks';
   $scope.phq9WarningContents = '<p>Get immediate help by phone. If you&rsquo;re thinking about suicide or would like emotional support, help is available 24/7.</p><p> If you need help:<br/> <a class="btn btn-primary" phone:"+1-800-273-TALK">Call the National Suicide Prevention Line</a></p>';
 

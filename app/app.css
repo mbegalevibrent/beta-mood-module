@@ -45,12 +45,13 @@ body {
 
 .onboarding .bottom-panel{
 	text-align: center;
+	overflow:auto; 
 	padding:1em;
 }
 
 .bottom-nav {
 	width:100%;
-	position:absolute;
+	position:fixed;
 	bottom:0;
 }
 

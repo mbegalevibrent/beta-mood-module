@@ -17,7 +17,7 @@ angular.module('myApp.view4', ['ngRoute'])
   $scope.questionsFinished = false;
   $scope.onboardingContent = [];
   $scope.answers = [];
-  $scope.faceLibrary = ['face1.png','face2.png', 'face3.png', 'face4.png', 'face5.png'];
+  $scope.faceLibrary = ['num1.png','num2.png', 'num3.png', 'num4.png', 'num5.png'];
   $scope.faceDesc = ['Very slightly or not at all', 'A little', 'Moderately', 'Quite a bit', 'Extremely']; 
   
   // Abhi to comment 

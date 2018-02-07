@@ -48,15 +48,17 @@
 	<div class="questions" style="padding-bottom:1.5em;"> 
 
 		<div class="question" ng-repeat="(idx, question) in currentQuestionnaire" ng-show="maxQuestionIndex >= idx">
-			<div class="question-label">
+			<div class="question-label">	
 			 {{question.field_label}}
 			</div>
-			<table style="margin-left:30%; width:70%%; padding-bottom:1em;">
+			<table >
 				<tr>
-		  			<td ng-repeat="face in [0,1,2,3,4,5]" style="width:20%;" ng-show="face >= 0" ng-class="{selected: face == answers[idx]}">
+		  			<td ng-repeat="face in [0,1,2,3,4,5]" style="width:20%;vertical-align:top;" ng-show="face >= 0" ng-class="{selected: face == answers[idx]}">
 						<label ng-click="setQuestionArrayValue(idx,face)">
 							<img src="img/{{faceLibrary[face]}}" style="width:86%;margin-left:7%;margin-right:7%;" class="face-unselected"/>
+							<p class="smiley-label">{{faceDesc[face]}}</p>
 						</label>
+						
 					</td>
 				</tr>
 			</table>

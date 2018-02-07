@@ -4,6 +4,13 @@ body {
 	font-size:1.6em;
 }
 
+.smiley-label {
+	padding-top: 5px; 
+	font-size:0.75em;
+	text-align:center;
+	margin-top: 10px; 
+}
+
 .header {
 	background-color: #1f1f5d; 
 	color:white;
@@ -88,6 +95,7 @@ body {
 
 .face-unselected {
 	opacity:.6;
+
 }
 
 .selected {

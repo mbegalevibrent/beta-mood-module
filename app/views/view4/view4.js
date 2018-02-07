@@ -18,6 +18,7 @@ angular.module('myApp.view4', ['ngRoute'])
   $scope.onboardingContent = [];
   $scope.answers = [];
   $scope.faceLibrary = ['face1.png','face2.png', 'face3.png', 'face4.png', 'face5.png'];
+  $scope.faceDesc = ['Very slightly or not at all', 'A little', 'Moderately', 'Quite a bit', 'Extremely']; 
   
   // Abhi to comment 
   var PHQ9_INTRO = 'We are going to ask you some questions that about different issues you may be experiencing. These questions have been commonly used to help clinicians understand your mental health. This usually takes around 5 minutes.';

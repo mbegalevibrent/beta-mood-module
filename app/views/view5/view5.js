@@ -9,7 +9,41 @@ angular.module('myApp.view5', ['ngRoute'])
   });
 }])
 
-.controller('View5Ctrl', ['$scope', '$location', function($scope,$location) {
+.controller('View5Ctrl', ['$scope', '$location','$http', function($scope,$location,$http) {
+
+
+	var thresholdMap = [];
+	thresholdMap[0] = ['panasPositive',10,19,'panaspositive_extremely_low' ];
+	thresholdMap[1] = ['panasPositive',20,26,'panaspositive_very_low' ];
+	thresholdMap[2] = ['panasPositive',27,33,'panaspositive_low' ];
+	thresholdMap[3] = ['panasPositive',34,40,'panaspositive_high' ];
+	thresholdMap[4] = ['panasPositive',41,47,'panaspositive_very_high' ];
+	thresholdMap[5] = ['panasPositive',47,100,'panaspositive_extremely_high' ];
+	thresholdMap[6] = ['panasNegative',10,11,'panasnegative_very_low' ];
+	thresholdMap[7] = ['panasNegative',12,17,'panasnegative_low' ];
+	thresholdMap[8] = ['panasNegative',18,23,'panasnegative_high' ];
+	thresholdMap[9] = ['panasNegative',24,29,'panasnegative_very_high' ];
+	thresholdMap[10] = ['panasNegative',29,100,'panasnegative_extremely_high' ];
+	thresholdMap[11] = ['phq9Score',0,5,'phq9_low' ];
+	thresholdMap[12] = ['phq9Score',6,11,'phq9_medium' ];
+	thresholdMap[13] = ['phq9Score',12,15,'phq9_high' ];
+	thresholdMap[14] = ['phq9Score',16,100,'phq9_very_high'];	
+	thresholdMap[15] = ['lssScore',5,9,'lss_extremely_dissatisfied'];
+	thresholdMap[16] = ['lssScore',10,14,'lss_dissatisfied'];
+	thresholdMap[17] = ['lssScore',15,19,'lss_below_avg'];
+	thresholdMap[18] = ['lssScore',20,24,'lss_avg'];
+	thresholdMap[19] = ['lssScore',25,29,'lss_high'];
+	thresholdMap[20] = ['lssScore',30,35,'lss_very_high'];
+
+	$http.get('/forms/feedback.json').success(function (data) {
+	      $scope.feedback = data;
+	      $scope.loadFeedback();       
+	  })
+	  .error(function (data) {
+	      console.log("there was an error");
+	      $scope.loadFeedback();       
+	});
+
 
 	var feedbackOptions = [];
 	// Abhi -- proposal
@@ -19,59 +53,86 @@ angular.module('myApp.view5', ['ngRoute'])
 	// if we decide that the form is 
 	// Ref- Kroenke, K., Spitzer, R. L., & Williams, J. B. (2001). The PHQ-9: Validity of a brief depression severity measure. Journal of General Internal Medicine, 169, 606–613.
 
-	$scope.mood = parseInt(localStorage['mood']);
+	$scope.phq9Score = function(){
 
-	var prioritizedFeedback = [];
+		var sum = 0;
 
-	if ($scope.mood <3) {
-		prioritizedFeedback.push('mood_negative');
-	} else if($scope.mood == 3){
-		prioritizedFeedback.push('mood_neutral');
+		for (var i = 0; i < 9; i++) {
+		   sum += parseInt(localStorage['phq9_' + (i+1)])
+		}
 
-	} else if ($scope.mood >3){
-		prioritizedFeedback.push('mood_positive');
+		return sum
 	}
 
-	feedbackOptions['mood_neutral'] = 'Feedback when a participant is having a neutral mood.';
-	feedbackOptions['mood_negative'] = 'Feedback when a participant is having a bad mood.';
-	feedbackOptions['mood_positive'] = 'Feedback when a participant is having a good mood.';
-	feedbackOptions['phq_item_1'] = 'something about being down, depressed or hopeless';
-	feedbackOptions['panas_emotion'] = 'Abhi text';
-	feedbackOptions['lss_happy'] = 'Abhi text';
+	$scope.lssScore = function(){
 
+		var sum = 0;
 
-	var MILD_DEPRESSION = '<h4>Your current PHQ-9 score {score}&nbsp;shows symptoms of moderate depression.</h4> <p><strong>Next Steps</strong></p> <ul> <li>Track your daily mood for next #x TBD weeks&nbsp;</li> </ul> <p><strong>How to find help?</strong></p> <ul><li>PMI related clinical helpline?</li> </ul><p>&nbsp;</p>';
+		for (var i = 0; i < 5; i++) {
+		   sum += parseInt(localStorage['lss_' + (i+1)])
+		}
 
-	var MODERATE_DEPRESSION = '<h4>Your current PHQ-9 score {score}&nbsp;shows symptoms of moderate depression.</h4> <p><strong>Next Steps</strong></p> <ul> <li>Track your daily mood for next #x TBD weeks&nbsp;</li> </ul> <p><strong>How to find help?</strong></p> <ul><li>PMI related clinical helpline?</li> </ul><p>&nbsp;</p>';
+		return sum
+	}
 
-	var MAJOR_DEPRESSION = '<h4>Your current PHQ-9 score {score}&nbsp;shows symptoms of moderate depression.</h4> <p><strong>Next Steps</strong></p> <ul> <li>Track your daily mood for next #x TBD weeks&nbsp;</li> </ul> <p><strong>How to find help?</strong></p> <ul><li>PMI related clinical helpline?</li> </ul><p>&nbsp;</p>';
+	$scope.panasPositiveScore = function(){
+		var sum = 0;
 
-	// Two options
-	// 1
-	// Mild Depression
-	feedbackOptions['phq_gross_score_lt_10'] = MILD_DEPRESSION;
-	//Moderate Depression
-	feedbackOptions['phq_gross_score_gtOrEQ_10_ltorEq_19'] = MODERATE_DEPRESSION;
-	//Major Depression
-	feedbackOptions['phq_gross_score_gtOrEQ_20_ltorEq_27'] = MAJOR_DEPRESSION;
-	
-	//2
-	// Ref- Kroenke, K., Spitzer, R. L., & Williams, J. B. (2001). The PHQ-9: Validity of a brief depression severity measure. Journal of General Internal Medicine, 169, 606–613.
-	// Minimal Depression
-	feedbackOptions['phq_gross_score_ltOrEq_4'] = 'Minimal Depression';
-	// Mild Depression
-	feedbackOptions['phq_gross_score_gtOrEQ_5_ltorEq_9'] = MILD_DEPRESSION;
-	//'Moderate Depression'
-	feedbackOptions['phq_gross_score_gtOrEQ_10_ltorEq_14'] = MODERATE_DEPRESSION
-	//Moderately Severe Depression
-	feedbackOptions['phq_gross_score_gtOrEQ_15_ltorEq_19'] = MODERATE_DEPRESSION;
-	// Severe Depression
-	feedbackOptions['phq_gross_score_gtOrEQ_20_ltorEq_27'] = MAJOR_DEPRESSION;
+		var panasArray = localStorage.answers.split(",");
+		var positivePositions = [1, 3, 5, 9, 10, 12, 14, 16, 17, 19];
 
+		for (var i = 0; i < positivePositions.length; i++) {
+		   sum += parseInt(panasArray[positivePositions[i]]);
 
+		}
 
-	$scope.selectedFeedbackLabel = function(){return prioritizedFeedback[0]}
-    $scope.currentText = feedbackOptions[$scope.selectedFeedbackLabel()];
+		return sum
+	}
+
+	$scope.panasNegativeScore = function(){
+		var sum = 0;
+		var panasArray = localStorage.answers.split(",");
+
+		var negativePositions = [2, 4, 6, 7, 8, 11, 13, 15, 18, 20]
+
+		for (var i = 0; i < negativePositions.length; i++) {
+		   sum += parseInt(panasArray[negativePositions[i]]);
+		}
+
+		return sum
+	}
+
+	$scope.between = function(x, min, max) {
+  		return x >= min && x <= max;
+	}	
+
+	$scope.loadFeedback = function(){
+
+		for (var i = 0; i < thresholdMap.length; i++){
+			switch (thresholdMap[i][0]) {
+			  case 'panasNegative':
+			  	if($scope.between($scope.panasPositiveScore(),thresholdMap[i][1],thresholdMap[i][2])){var items = $scope.feedback[thresholdMap[i][3]]}
+			    break;
+			  case 'panasPositive':
+			  	if($scope.between($scope.panasNegativeScore(),thresholdMap[i][1],thresholdMap[i][2])){var items = $scope.feedback[thresholdMap[i][3]]}
+			    break;
+		      case 'lssScore':
+		      	if($scope.between($scope.lssScore(),thresholdMap[i][1],thresholdMap[i][2])){var items = $scope.feedback[thresholdMap[i][3]]}
+			    break;
+		      case 'phq9Score':
+	      		if($scope.between($scope.phq9Score(),thresholdMap[i][1],thresholdMap[i][2])){var items = $scope.feedback[thresholdMap[i][3]]}
+			    break;
+			  default:
+			    var items = ['Sorry, we are out of responses'];
+			}
+		}
+		debugger;
+
+	    $scope.currentText = items[Math.floor(Math.random()*items.length)];
+
+		// localStorage.clear()
+	}
+
 	$scope.next = function(){
 		$location.url("/view1/");
 		// window.location.href= 'https://participant.joinallofus.org/';

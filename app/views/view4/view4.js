@@ -81,6 +81,8 @@ angular.module('myApp.view4', ['ngRoute'])
     if ($scope.onboardingContentName == 'phq' && field_name == 'phq9_9' && parseInt(value) > 0){
         $scope.showPH9Warning();
     } 
+
+    localStorage[field_name] = value;
     // else {
     //   $scope.next();
     // }

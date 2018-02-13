@@ -111,25 +111,33 @@ angular.module('myApp.view5', ['ngRoute'])
 		for (var i = 0; i < thresholdMap.length; i++){
 			switch (thresholdMap[i][0]) {
 			  case 'panasNegative':
-			  	if($scope.between($scope.panasPositiveScore(),thresholdMap[i][1],thresholdMap[i][2])){var items = $scope.feedback[thresholdMap[i][3]]}
+			  	if($scope.between($scope.panasPositiveScore(),thresholdMap[i][1],thresholdMap[i][2])){
+			  		var items = $scope.feedback[thresholdMap[i][3]]
+			  		$scope.image = thresholdMap[i][3];
+			  	}
 			    break;
 			  case 'panasPositive':
-			  	if($scope.between($scope.panasNegativeScore(),thresholdMap[i][1],thresholdMap[i][2])){var items = $scope.feedback[thresholdMap[i][3]]}
+			  	if($scope.between($scope.panasNegativeScore(),thresholdMap[i][1],thresholdMap[i][2])){
+			  		var items = $scope.feedback[thresholdMap[i][3]]
+			  		$scope.image = thresholdMap[i][3];
+			  	}
 			    break;
 		      case 'lssScore':
-		      	if($scope.between($scope.lssScore(),thresholdMap[i][1],thresholdMap[i][2])){var items = $scope.feedback[thresholdMap[i][3]]}
+		      	if($scope.between($scope.lssScore(),thresholdMap[i][1],thresholdMap[i][2])){var items = $scope.feedback[thresholdMap[i][3]]
+			  		$scope.image = thresholdMap[i][3];
+		      	}
 			    break;
 		      case 'phq9Score':
-	      		if($scope.between($scope.phq9Score(),thresholdMap[i][1],thresholdMap[i][2])){var items = $scope.feedback[thresholdMap[i][3]]}
+	      		if($scope.between($scope.phq9Score(),thresholdMap[i][1],thresholdMap[i][2])){var items = $scope.feedback[thresholdMap[i][3]];
+			  		$scope.image = thresholdMap[i][3];
+	      		}
 			    break;
 			  default:
 			    var items = ['Sorry, we are out of responses'];
 			}
 		}
-		debugger;
 
 	    $scope.currentText = items[Math.floor(Math.random()*items.length)];
-
 		// localStorage.clear()
 	}
 

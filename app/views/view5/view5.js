@@ -138,7 +138,7 @@ angular.module('myApp.view5', ['ngRoute'])
 		}
 
 	    $scope.currentText = items[Math.floor(Math.random()*items.length)];
-		// localStorage.clear()
+		localStorage.clear()
 	}
 
 	$scope.next = function(){

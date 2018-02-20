@@ -21,10 +21,10 @@ angular.module('myApp.view4', ['ngRoute'])
   $scope.faceDesc = ['Very slightly or not at all', 'A little', 'Moderately', 'Quite a bit', 'Extremely']; 
   
   // Abhi to comment 
-  var PHQ9_INTRO = 'We are going to ask you some questions that about different issues you may be experiencing. These questions have been commonly used to help clinicians understand your mental health. This usually takes around 5 minutes.';
+  var PHQ9_INTRO = 'We are going to ask you some questions about how you’re doing. This usually takes no more than 2 minutes.';
   $scope.onboardingContent['phq'] = {text: PHQ9_INTRO, image:'phq9.png'};
-  $scope.onboardingContent['lss'] = {text:'We are going to ask you some questions that will help us understand how happy you feel on your current life\'s path and should take around 5 minutes.', image:'lss.png'};
-  $scope.onboardingContent['panas'] = {text:'Once a week we are going to ask you some questions that describe different feelings and emotions. Read each item and then list the number from the scale below next to each word. Indicate to what extent you feel this way right now, that is, at the present moment OR indicate the extent you have felt this way over the past week (circle the instructions you followed when taking this measure). This may take up to 10 minutes.', image:'panas.png'};
+  $scope.onboardingContent['lss'] = {text:'Please read each of the following statements. Then, tell us how much you agree with each one on a scale from 1 (Strongly Disagree) to 7 (Strongly Agree).', image:'lss.png'};
+  $scope.onboardingContent['panas'] = {text:'Once a week we will show you a number of words that describe different feelings and emotions. <br> Read each word and then select how much you feel this way right now, at this moment, on a scale from 1 (not at all) to 5 (extremely).', image:'panas.png'};
   $scope.phq9WarningTitle = '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Risks';
   $scope.phq9WarningContents = '<p>Get immediate help by phone. If you&rsquo;re thinking about suicide or would like emotional support, help is available 24/7.</p><p> If you need help:<br/> <a class="btn btn-primary" phone:"+1-800-273-TALK">Call the National Suicide Prevention Line</a></p>';
 

@@ -13,27 +13,35 @@ angular.module('myApp.view5', ['ngRoute'])
 
 
 	var thresholdMap = [];
-	thresholdMap[0] = ['panasPositive',10,19,'panaspositive_extremely_low' ];
-	thresholdMap[1] = ['panasPositive',20,26,'panaspositive_very_low' ];
-	thresholdMap[2] = ['panasPositive',27,33,'panaspositive_low' ];
-	thresholdMap[3] = ['panasPositive',34,40,'panaspositive_high' ];
-	thresholdMap[4] = ['panasPositive',41,47,'panaspositive_very_high' ];
-	thresholdMap[5] = ['panasPositive',47,100,'panaspositive_extremely_high' ];
-	thresholdMap[6] = ['panasNegative',10,11,'panasnegative_very_low' ];
-	thresholdMap[7] = ['panasNegative',12,17,'panasnegative_low' ];
-	thresholdMap[8] = ['panasNegative',18,23,'panasnegative_high' ];
-	thresholdMap[9] = ['panasNegative',24,29,'panasnegative_very_high' ];
-	thresholdMap[10] = ['panasNegative',29,100,'panasnegative_extremely_high' ];
-	thresholdMap[11] = ['phq9Score',0,5,'phq9_low' ];
-	thresholdMap[12] = ['phq9Score',6,11,'phq9_medium' ];
-	thresholdMap[13] = ['phq9Score',12,15,'phq9_high' ];
-	thresholdMap[14] = ['phq9Score',16,100,'phq9_very_high'];	
-	thresholdMap[15] = ['lssScore',5,9,'lss_extremely_dissatisfied'];
-	thresholdMap[16] = ['lssScore',10,14,'lss_dissatisfied'];
-	thresholdMap[17] = ['lssScore',15,19,'lss_below_avg'];
-	thresholdMap[18] = ['lssScore',20,24,'lss_avg'];
-	thresholdMap[19] = ['lssScore',25,29,'lss_high'];
-	thresholdMap[20] = ['lssScore',30,35,'lss_very_high'];
+	thresholdMap[0] = ['panasPositive',10,19,'panaspositive_extremely_low','img/PANAS_Feedback'];
+	thresholdMap[1] = ['panasPositive',20,26,'panaspositive_very_low','img/PANAS_Feedback'];
+	thresholdMap[2] = ['panasPositive',27,33,'panaspositive_low','img/PANAS_Feedback'];
+	thresholdMap[3] = ['panasPositive',34,40,'panaspositive_high','img/PANAS_Feedback'];
+	thresholdMap[4] = ['panasPositive',41,47,'panaspositive_very_high','img/PANAS_Feedback'];
+	thresholdMap[5] = ['panasPositive',47,100,'panaspositive_extremely_high','img/PANAS_Feedback'];
+	thresholdMap[6] = ['panasNegative',10,11,'panasnegative_very_low','img/PANAS_Feedback'];
+	thresholdMap[7] = ['panasNegative',12,17,'panasnegative_low','img/PANAS_Feedback'];
+	thresholdMap[8] = ['panasNegative',18,23,'panasnegative_high','img/PANAS_Feedback'];
+	thresholdMap[9] = ['panasNegative',24,29,'panasnegative_very_high','img/PANAS_Feedback'];
+	thresholdMap[10] = ['panasNegative',29,100,'panasnegative_extremely_high','img/PANAS_Feedback'];
+	thresholdMap[11] = ['phq9Score',0,5,'phq9_low','img/PHQ_Feedback'];
+	thresholdMap[12] = ['phq9Score',6,11,'phq9_medium','img/PHQ_Feedback'];
+	thresholdMap[13] = ['phq9Score',12,15,'phq9_high','img/PHQ_Feedback'];
+	thresholdMap[14] = ['phq9Score',16,100,'phq9_very_high','img/PHQ_Feedback'];	
+	thresholdMap[15] = ['lssScore',5,9,'lss_extremely_dissatisfied','img/PANAS_Feedback'];
+	thresholdMap[16] = ['lssScore',10,14,'lss_dissatisfied','img/PANAS_Feedback'];
+	thresholdMap[17] = ['lssScore',15,19,'lss_below_avg','img/PANAS_Feedback'];
+	thresholdMap[18] = ['lssScore',20,24,'lss_avg','img/PANAS_Feedback'];
+	thresholdMap[19] = ['lssScore',25,29,'lss_high','img/PANAS_Feedback'];
+	thresholdMap[20] = ['lssScore',30,35,'lss_very_high','img/PANAS_Feedback'];
+
+
+
+
+
+
+
+
 
 	$http.get('/forms/feedback.json').success(function (data) {
 	      $scope.feedback = data;
@@ -113,23 +121,24 @@ angular.module('myApp.view5', ['ngRoute'])
 			  case 'panasNegative':
 			  	if($scope.between($scope.panasPositiveScore(),thresholdMap[i][1],thresholdMap[i][2])){
 			  		var items = $scope.feedback[thresholdMap[i][3]]
-			  		$scope.image = thresholdMap[i][3];
+			  		$scope.image = thresholdMap[i][4];
 			  	}
 			    break;
 			  case 'panasPositive':
 			  	if($scope.between($scope.panasNegativeScore(),thresholdMap[i][1],thresholdMap[i][2])){
 			  		var items = $scope.feedback[thresholdMap[i][3]]
-			  		$scope.image = thresholdMap[i][3];
+			  		$scope.image = thresholdMap[i][4];
 			  	}
 			    break;
 		      case 'lssScore':
-		      	if($scope.between($scope.lssScore(),thresholdMap[i][1],thresholdMap[i][2])){var items = $scope.feedback[thresholdMap[i][3]]
-			  		$scope.image = thresholdMap[i][3];
+		      	if($scope.between($scope.lssScore(),thresholdMap[i][1],thresholdMap[i][2])){
+		      		var items = $scope.feedback[thresholdMap[i][3]]
+			  		$scope.image = thresholdMap[i][4];
 		      	}
 			    break;
 		      case 'phq9Score':
 	      		if($scope.between($scope.phq9Score(),thresholdMap[i][1],thresholdMap[i][2])){var items = $scope.feedback[thresholdMap[i][3]];
-			  		$scope.image = thresholdMap[i][3];
+			  		$scope.image = thresholdMap[i][4];
 	      		}
 			    break;
 			  default:
